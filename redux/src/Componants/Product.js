@@ -1,15 +1,14 @@
 import { StyleSheet, Text, View,Image, Button } from 'react-native'
 import React from 'react'
 import { useDispatch } from 'react-redux';
-import {addtocart} from "./Redux/Actions"
-
+import { addToCart } from './Redux/actions'; 
 
 const Product = (props) => {
     const item=props.item
     const dispatch= useDispatch()
 
 const  handleaddtocart=(item)=>{
-  dispatch(addtocart(item))
+  dispatch(addToCart(item))
   }
   return (
     <View style={styles.container}>

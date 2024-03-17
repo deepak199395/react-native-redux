@@ -1,10 +1,20 @@
 import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-
+import React, { useEffect, useState } from 'react'
+import {useSelector} from "react-redux"
 const Header = () => {
+
+  const cortData=useSelector((state)=>state.reducer)
+  const[cartItem,setCartItem]=useState(0)
+  
+  useEffect(()=>{
+ setCartItem(cortData.length)
+  },[cortData])
+
+
+
   return (
     <View>
-      <Text style={styles.txt}>0</Text>
+      <Text style={styles.txt}>{cartItem}</Text>
     </View>
   )
 }

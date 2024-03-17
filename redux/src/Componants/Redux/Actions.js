@@ -1,9 +1,9 @@
-import {ADD_TO_CART} from "./Contants"
+import {ADD_TO_CART} from "./contants"
 
 
-export function addtocart(item){ 
+export function addToCart(item){ 
    return{
     type:ADD_TO_CART,
-    date:item
+    data:item
    }
 }
