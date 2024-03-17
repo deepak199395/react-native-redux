@@ -9,22 +9,27 @@ const Header = () => {
   useEffect(()=>{
  setCartItem(cortData.length)
   },[cortData])
-
-
-
-  return (
-    <View>
+ return (
+    <View style={styles.container}>
+    <Text>Gangi</Text>
       <Text style={styles.txt}>{cartItem}</Text>
     </View>
   )
 }
-
 export default Header
-
 const styles = StyleSheet.create({
     txt:{
         textAlign:"right",
-        padding:5,
-        backgroundColor:'orange'
+        padding:15,
+        backgroundColor:'orange',
+        width:50,
+        left:300,
+        borderWidth:1,
+        borderColor:"white",
+        borderRadius:10
+    },
+    container:{
+      margin:5,
+      flexDirection:"row"
     }
 })
